@@ -1,79 +1,69 @@
 :root {
     --branco-principal: #FFFFFF;
     --cinza-secundario: #C0C0C0;
-    --botao-azul:#167BF7;
+    --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
-    --fonte-principal:"inter";
+    --fonte-principal: 'Inter', sans-serif;
+}
 
-}   
-body{
+body {
     background-color: var(--cor-de-fundo);
-    color: #FFFFFF;
+    color: var(--branco-principal);
     font-family: var(--fonte-principal);
     font-size: 16px;
     font-weight: 400;
-}
-*{
     margin: 0;
-    padding:0;
+    padding: 0;
 }
-.principal{
-background-image: url("img/Background.png") ;
-background-repeat: no-repeat;
-background-size: contain;
-align-items: center;
-text-align: center;
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
 }
-.container{
+
+.container {
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
 }
+
 .container__botao {
     background-color: var(--botao-azul);
-    border-radius: 5px;
-    padding: 1em;
-    color: #C0C0C0;
+    border-radius: 8px;
+    padding: 1.5em;
+    color: var(--branco-principal);
     display: block;
     text-decoration: none;
     margin-bottom: 1em;
 }
-.botao__secundario{
+
+.botao_secundario {
     background-color: transparent;
     border: 2px solid var(--branco-principal);
 }
-.container__aviso{
+
+.container__aviso {
     font-size: 12px;
     color: var(--cinza-secundario);
 }
-.container__titulo{
-    font-size: 28px;
-    font-weight: 700;
-}
-.container__imagem{
-    margin: 3em 0 3em 0;
-}
-.container__caixa{
-    margin:  5em 6em;
-}
-.secundario__imagem{
-    width: 80%;
-}
-.secundario{
-    align-items: center;
-    margin: 10em;
-}
-.descricao__titulo{
-    font-weight: 700;
-    font-size: 48px;
-    color: #C0C0C0;
-    margin-bottom: 0.1em
-}
-.descricao__texto{
-    color: var (--cinza-secundario);
-}
-.secundario__botao{
-    display: inline-block;
-    margin-top: 1em;
-    padding: 2em;
+
+/* --- AQUI ESTÁ A CORREÇÃO PARA O CELULAR --- */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 100%; /* Muda para uma coluna só */
+        height: auto;
+        padding: 2em;
+    }
+
+    .container__botao {
+        width: 100%;       /* Ocupa a largura total no celular */
+        box-sizing: border-box; /* Garante que o padding não aumente o botão */
+    }
+
+    .principal {
+        background-size: cover; /* Ajusta o fundo para preencher melhor */
+    }
 }
