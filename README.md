@@ -1,4 +1,4 @@
-# Alura Plus 📺
+# aluraplus-clone-interface 📺
 
 Projeto desenvolvido durante o curso da Alura para praticar conceitos fundamentais de HTML5 e CSS3. O site é uma página de destino (landing page) focada em subscrições de serviços de streaming.
 
